@@ -1,0 +1,48 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import Spoiler from '@/components/Spoiler.astro'
+import { config } from '@/site-config'
+import { withBase } from '@/utils'
+---
+
+<BaseLayout title="About" description={`About ${config.site.author}`}>
+  <div class="animate mx-auto max-w-3xl">
+    <header class="not-prose mb-8 text-center">
+      <h1 class="font-serif text-3xl font-semibold">关于我</h1>
+      <p class="mt-3 text-ink-soft">{config.site.description}</p>
+    </header>
+
+    <div class="prose prose-fill">
+      <h2>个体年代</h2>
+      <p>
+       在这里写点自己感兴趣的东西，写点个人感悟 。<strong>行动是最好的解药</strong> — 干活就有钱买好吃的，偷懒就没有钱买，就这么简单。
+      </p>
+      <blockquote>
+        干具体的事情，别扯淡，更别扯没用的
+      </blockquote>
+
+      <h2>关于我</h2>
+      {
+        config.home.hero.about
+          .split(/\n\s*\n/)
+          .filter(Boolean)
+          .map((paragraph) => <p>{paragraph}</p>)
+      }
+
+      <h2>我分析世界的方法论</h2>
+      <ul>
+        <li><strong>阴阳</strong> 一切事物都是对立统一的</li>
+        <li>
+          <strong>辩证</strong> 具体问题，具体分析，知犯何逆，随证治之
+        </li>
+        
+      </ul>
+
+      <h2>联系我</h2>
+      <p>
+        微信：abctunan &nbsp;
+        电话：<Spoiler>你上当了，啥也没有</Spoiler>
+      </p>
+    </div>
+  </div>
+</BaseLayout>
