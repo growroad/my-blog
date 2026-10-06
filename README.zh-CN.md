@@ -184,3 +184,5 @@ src/
 ## 致谢与许可
 
 设计受到 [astro-theme-pure](https://github.com/cworld1/astro-theme-pure)（Apache-2.0）的启发，主题本身为独立实现。`src/plugins/shiki-custom-transformers.ts`、`src/plugins/shiki-official` 和 `public/icons/code.svg` 中的 Shiki 代码块管线移植自该项目，并遵循 Apache-2.0。仓库采用 [MIT License](./LICENSE)。
+
+博客文章、教程等内容 Copyright © 2026 growroad。保留所有权利。未经书面许可，禁止转载、复制、商用、二次改编，或转换为其他形式发布。
