@@ -209,7 +209,7 @@ export const config: Config = {
   },
 
   comment: {
-    provider: '图哥',
+    provider: 'waline',
     // Fill in your Waline server URL to enable comments, e.g. deployed on
     // Vercel + LeanCloud: https://your-waline.vercel.app/
     server: ''
